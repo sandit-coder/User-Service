@@ -6,10 +6,9 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5"
 )
 
-func (repo *UserRepository) DeleteById(ctx context.Context, tx pgx.Tx, id uuid.UUID) error {
+func (repo *UserRepository) DeleteById(ctx context.Context, id uuid.UUID) error {
 	query := "DELETE FROM users WHERE id = $1"
 
 	commandTag, err := repo.db.Exec(ctx, query, id)

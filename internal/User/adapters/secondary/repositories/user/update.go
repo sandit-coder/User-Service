@@ -5,11 +5,9 @@ import (
 	"UserCrud/internal/User/domain/entities"
 	"context"
 	"fmt"
-
-	"github.com/jackc/pgx/v5"
 )
 
-func (repo *UserRepository) Update(ctx context.Context, tx pgx.Tx, entity *entities.User) (err error) {
+func (repo *UserRepository) Update(ctx context.Context, entity *entities.User) (err error) {
 	query := "UPDATE users SET first_name = $1, last_name = $2, email = $3 WHERE id = $4;"
 
 	commandTag, err := repo.db.Exec(ctx, query, entity.FirstName, entity.LastName, entity.Email, entity.ID)

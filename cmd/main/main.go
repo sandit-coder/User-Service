@@ -9,12 +9,14 @@ import (
 
 func main() {
 	fx.New(
-		di.ConfigModule,
-		di.ValidatorModule,
 		di.LoggerModule,
+		di.ConfigModule,
+		di.MiddlewareModule,
+
+		di.ValidatorModule,
 		di.PostgresModule,
 		di.FiberModule,
-		di.MiddlewareModule,
+
 		di.RepositoryModule,
 		di.ServiceModule,
 		di.HandlerModule,

@@ -5,6 +5,7 @@ import (
 	"context"
 
 	trmpg "github.com/avito-tech/go-transaction-manager/drivers/pgxv5/v2"
+	"github.com/avito-tech/go-transaction-manager/trm/v2"
 	"github.com/avito-tech/go-transaction-manager/trm/v2/manager"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
@@ -20,6 +21,6 @@ func NewDb(cfg *config.DBConfig) (*pgxpool.Pool, error) {
 	return db, nil
 }
 
-func NewTransactionManager(pool *pgxpool.Pool) *manager.Manager {
+func NewTransactionManager(pool *pgxpool.Pool) trm.Manager {
 	return manager.Must(trmpg.NewDefaultFactory(pool))
 }

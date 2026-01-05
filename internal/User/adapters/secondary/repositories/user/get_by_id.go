@@ -10,10 +10,9 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5"
 )
 
-func (repo *UserRepository) GetById(ctx context.Context, tx pgx.Tx, id uuid.UUID) (*entities.User, error) {
+func (repo *UserRepository) GetById(ctx context.Context, id uuid.UUID) (*entities.User, error) {
 	query := "SELECT id, first_name, last_name, email FROM users WHERE id = $1"
 
 	var user entities.User

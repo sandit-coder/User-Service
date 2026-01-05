@@ -10,11 +10,10 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgerrcode"
-	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgconn"
 )
 
-func (repo *UserRepository) Create(ctx context.Context, tx pgx.Tx, entity *entities.User) (uuid.UUID, error) {
+func (repo *UserRepository) Create(ctx context.Context, entity *entities.User) (uuid.UUID, error) {
 	query := `
         INSERT INTO users (id, email, first_name, last_name)
         VALUES ($1, $2, $3, $4)

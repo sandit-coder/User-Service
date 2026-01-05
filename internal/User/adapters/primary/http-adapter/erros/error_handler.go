@@ -2,7 +2,6 @@ package erros
 
 import (
 	"UserCrud/internal/User/application/errors"
-	"UserCrud/internal/User/domain/errors"
 	"context"
 	"errors"
 
@@ -12,7 +11,7 @@ import (
 
 func ErrorHandler(c fiber.Ctx, err error) error {
 	switch {
-	case errors.Is(err, apperrors.apperrors.ErrInvalidInput):
+	case errors.Is(err, apperrors.ErrInvalidInput):
 		return c.Status(fiber.StatusBadRequest).JSON(errResponse(err))
 
 	case errors.Is(err, apperrors.ErrAlreadyExists):
