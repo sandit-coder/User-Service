@@ -1,14 +1,14 @@
 package user
 
 import (
-	"UserCrud/internal/User/application/dtos"
-	"UserCrud/internal/User/domain/entities"
+	"UserCrud/internal/user/application/dtos"
+	"UserCrud/internal/user/domain/entities"
 	"context"
 
 	"github.com/google/uuid"
 )
 
-func (service *Service) Update(ctx context.Context, request *dtos.UpdateUserRequest, id uuid.UUID) error {
+func (service *Service) Update(ctx context.Context, request *dtos.User, id uuid.UUID) error {
 	err := service.trm.Do(ctx, func(ctx context.Context) error {
 		var entity = entities.NewUser(
 			uuid.New(),
@@ -21,6 +21,6 @@ func (service *Service) Update(ctx context.Context, request *dtos.UpdateUserRequ
 		}
 		return nil
 	})
-	
+
 	return err
 }

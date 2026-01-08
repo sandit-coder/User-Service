@@ -1,7 +1,7 @@
 package ports
 
 import (
-	"UserCrud/internal/User/domain/entities"
+	"UserCrud/internal/user/domain/entities"
 	"context"
 
 	"github.com/google/uuid"

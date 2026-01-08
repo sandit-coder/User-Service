@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"UserCrud/internal/User/application/ports/user"
+	"UserCrud/internal/user/application/ports/user"
 )
 
 type UserHandler struct {

@@ -1,8 +1,8 @@
 package user
 
 import (
-	"UserCrud/internal/User/application/converters"
-	"UserCrud/internal/User/application/dtos"
+	"UserCrud/internal/user/application/converters"
+	"UserCrud/internal/user/application/dtos"
 	"context"
 
 	"github.com/google/uuid"

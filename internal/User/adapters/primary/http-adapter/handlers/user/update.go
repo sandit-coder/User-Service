@@ -1,7 +1,8 @@
 package handlers
 
 import (
-	"UserCrud/internal/User/application/dtos"
+	"UserCrud/internal/user/adapters/request"
+	"UserCrud/internal/user/application/dtos"
 
 	"github.com/gofiber/fiber/v3"
 	"github.com/google/uuid"
@@ -14,13 +15,19 @@ func (handler *UserHandler) Update(c fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).SendString("id must be a valid UUID")
 	}
 
-	var req dtos.UpdateUserRequest
+	var req request.UpdateUserRequest
 
 	if err := c.Bind().Body(&req); err != nil {
 		return err
 	}
 
-	if err := handler.service.Update(c.Context(), &req, id); err != nil {
+	dto := &dtos.User{
+		Email:     req.Email,
+		FirstName: req.FirstName,
+		LastName:  req.LastName,
+	}
+
+	if err := handler.service.Update(c.Context(), dto, id); err != nil {
 		return err
 	}
 

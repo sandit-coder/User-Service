@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"UserCrud/internal/User/config"
+	"UserCrud/internal/user/config"
 	"context"
 
 	trmpg "github.com/avito-tech/go-transaction-manager/drivers/pgxv5/v2"

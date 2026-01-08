@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"UserCrud/internal/User/application/ports/user"
+	"UserCrud/internal/user/application/ports/user"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 )

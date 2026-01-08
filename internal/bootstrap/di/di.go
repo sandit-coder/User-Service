@@ -1,16 +1,16 @@
 package di
 
 import (
-	middleware "UserCrud/internal/User/adapters/middlwaries"
-	handlers "UserCrud/internal/User/adapters/primary/http-adapter/handlers/user"
-	"UserCrud/internal/User/adapters/primary/http-adapter/router"
-	repositories "UserCrud/internal/User/adapters/secondary/repositories/user"
-	"UserCrud/internal/User/application/services/user"
-	"UserCrud/internal/User/config"
-	"UserCrud/internal/User/infrastructure/fiber"
-	"UserCrud/internal/User/infrastructure/logger"
-	"UserCrud/internal/User/infrastructure/postgres"
-	"UserCrud/internal/User/infrastructure/validator"
+	middleware "UserCrud/internal/user/adapters/middlwaries"
+	handlers "UserCrud/internal/user/adapters/primary/http-adapter/handlers/user"
+	"UserCrud/internal/user/adapters/primary/http-adapter/router"
+	repositories "UserCrud/internal/user/adapters/secondary/repositories/user"
+	"UserCrud/internal/user/application/services/user"
+	"UserCrud/internal/user/config"
+	"UserCrud/internal/user/infrastructure/fiber"
+	"UserCrud/internal/user/infrastructure/logger"
+	"UserCrud/internal/user/infrastructure/postgres"
+	"UserCrud/internal/user/infrastructure/validator"
 
 	"go.uber.org/fx"
 )

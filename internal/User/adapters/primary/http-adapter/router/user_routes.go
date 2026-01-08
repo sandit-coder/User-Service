@@ -1,7 +1,7 @@
 package router
 
 import (
-	"UserCrud/internal/User/adapters/primary/http-adapter/handlers/user"
+	"UserCrud/internal/user/adapters/primary/http-adapter/handlers/user"
 
 	"github.com/gofiber/fiber/v3"
 )

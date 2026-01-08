@@ -1,7 +1,7 @@
 package user
 
 import (
-	"UserCrud/internal/User/application/ports/user"
+	"UserCrud/internal/user/application/ports/user"
 
 	"github.com/avito-tech/go-transaction-manager/trm/v2"
 )

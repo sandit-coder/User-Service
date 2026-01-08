@@ -1,9 +1,9 @@
 package server
 
 import (
-	"UserCrud/internal/User/adapters/primary/http-adapter/erros"
-	"UserCrud/internal/User/config"
-	"UserCrud/internal/User/infrastructure/validator"
+	"UserCrud/internal/user/adapters/primary/http-adapter/erros"
+	"UserCrud/internal/user/config"
+	"UserCrud/internal/user/infrastructure/validator"
 	"context"
 	"log"
 

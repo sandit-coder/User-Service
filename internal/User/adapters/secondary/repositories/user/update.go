@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"UserCrud/internal/User/application/errors"
-	"UserCrud/internal/User/domain/entities"
+	"UserCrud/internal/user/application/errors"
+	"UserCrud/internal/user/domain/entities"
 	"context"
 	"fmt"
 )

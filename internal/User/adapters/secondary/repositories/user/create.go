@@ -1,12 +1,12 @@
 package repositories
 
 import (
-	"UserCrud/internal/User/application/errors"
+	"UserCrud/internal/user/application/errors"
 	"context"
 	"errors"
 	"fmt"
 
-	"UserCrud/internal/User/domain/entities"
+	"UserCrud/internal/user/domain/entities"
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgerrcode"

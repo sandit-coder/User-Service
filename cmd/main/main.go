@@ -12,11 +12,9 @@ func main() {
 		di.LoggerModule,
 		di.ConfigModule,
 		di.MiddlewareModule,
-
 		di.ValidatorModule,
 		di.PostgresModule,
 		di.FiberModule,
-
 		di.RepositoryModule,
 		di.ServiceModule,
 		di.HandlerModule,

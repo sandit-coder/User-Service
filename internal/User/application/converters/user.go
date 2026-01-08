@@ -1,8 +1,8 @@
 package converters
 
 import (
-	"UserCrud/internal/User/application/dtos"
-	"UserCrud/internal/User/domain/entities"
+	"UserCrud/internal/user/application/dtos"
+	"UserCrud/internal/user/domain/entities"
 )
 
 func ToDtoFromEntity(user *entities.User) *dtos.User {
