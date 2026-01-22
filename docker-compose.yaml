@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_bank
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POOSTGRES_USER: user_user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: dev_db
+    ports:
+      - "5433:5433"
+
+  kafka:
+    image: apache/kafka:latest
+    container_name: kafka_bank
+    ports:
+    - "9092:9092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+
+volumes:
+  pgdata:
+
