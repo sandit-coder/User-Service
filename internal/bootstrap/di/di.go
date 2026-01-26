@@ -7,10 +7,10 @@ import (
 	repositories "UserCrud/internal/User/adapters/secondary/repositories/user"
 	"UserCrud/internal/User/application/services/user"
 	"UserCrud/internal/User/config"
-	"UserCrud/internal/User/infrastructure/fiber"
-	"UserCrud/internal/User/infrastructure/logger"
-	"UserCrud/internal/User/infrastructure/postgres"
-	"UserCrud/internal/User/infrastructure/validator"
+	server "UserCrud/internal/pkg/fiber"
+	"UserCrud/internal/pkg/logger"
+	"UserCrud/internal/pkg/postgres"
+	"UserCrud/internal/pkg/validator"
 
 	"go.uber.org/fx"
 )
